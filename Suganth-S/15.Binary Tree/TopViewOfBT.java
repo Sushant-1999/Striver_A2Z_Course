@@ -32,7 +32,7 @@ class TopViewOfBT(Node root)
 	
 	for(Map.Entry<Integer,Integer> entry: tmap.entrySet())
 	{
-		ans.add(entry.getValues())
+		ans.add(entry.getValue());
 	}
 	}
 	return ans;
