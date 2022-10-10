@@ -1,14 +1,19 @@
+
 class Solution {
-    public int findKthLargest(int[] nums, int k) {
-       PriorityQueue pq = new PriorityQueue<>();
-        for(int ele:nums)
+    
+    public boolean countSub(long arr[], long n)
+    {
+        for(int i=0; i<n/2; i++)
         {
-            pq.offer(ele);
-            if(pq.size()>k)
+            if(2*i+1<n && arr[2*i+1]>arr[i])
             {
-                pq.poll();
+                return false;
+            }
+            if(2*i+2<n && arr[2*i+2]>arr[i])
+            {
+                return false;
             }
         }
-        return(int) pq.peek();
+        return true;
     }
 }
